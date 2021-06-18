@@ -30,7 +30,6 @@ Partial Class Form_iniciarsesion
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btn_login_iniciar = New System.Windows.Forms.Button()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.btn_login_salir = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
@@ -39,8 +38,8 @@ Partial Class Form_iniciarsesion
         Me.Label_login_bienvenido.AutoSize = True
         Me.Label_login_bienvenido.BackColor = System.Drawing.Color.Silver
         Me.Label_login_bienvenido.Font = New System.Drawing.Font("Berlin Sans FB Demi", 25.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label_login_bienvenido.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label_login_bienvenido.Location = New System.Drawing.Point(723, 51)
+        Me.Label_login_bienvenido.ForeColor = System.Drawing.SystemColors.Desktop
+        Me.Label_login_bienvenido.Location = New System.Drawing.Point(306, 9)
         Me.Label_login_bienvenido.Name = "Label_login_bienvenido"
         Me.Label_login_bienvenido.Size = New System.Drawing.Size(234, 48)
         Me.Label_login_bienvenido.TabIndex = 0
@@ -51,7 +50,7 @@ Partial Class Form_iniciarsesion
         Me.Label_login_ingresadatos.AutoSize = True
         Me.Label_login_ingresadatos.BackColor = System.Drawing.Color.Silver
         Me.Label_login_ingresadatos.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label_login_ingresadatos.Location = New System.Drawing.Point(177, 180)
+        Me.Label_login_ingresadatos.Location = New System.Drawing.Point(308, 133)
         Me.Label_login_ingresadatos.Name = "Label_login_ingresadatos"
         Me.Label_login_ingresadatos.Size = New System.Drawing.Size(238, 33)
         Me.Label_login_ingresadatos.TabIndex = 1
@@ -59,14 +58,14 @@ Partial Class Form_iniciarsesion
         '
         'txt_usuario
         '
-        Me.txt_usuario.Location = New System.Drawing.Point(291, 284)
+        Me.txt_usuario.Location = New System.Drawing.Point(359, 237)
         Me.txt_usuario.Name = "txt_usuario"
         Me.txt_usuario.Size = New System.Drawing.Size(255, 22)
         Me.txt_usuario.TabIndex = 2
         '
         'txt_contrasena
         '
-        Me.txt_contrasena.Location = New System.Drawing.Point(291, 383)
+        Me.txt_contrasena.Location = New System.Drawing.Point(359, 317)
         Me.txt_contrasena.Name = "txt_contrasena"
         Me.txt_contrasena.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txt_contrasena.Size = New System.Drawing.Size(255, 22)
@@ -79,7 +78,7 @@ Partial Class Form_iniciarsesion
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Image = CType(resources.GetObject("Label1.Image"), System.Drawing.Image)
         Me.Label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label1.Location = New System.Drawing.Point(63, 375)
+        Me.Label1.Location = New System.Drawing.Point(102, 310)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(185, 29)
         Me.Label1.TabIndex = 4
@@ -92,7 +91,7 @@ Partial Class Form_iniciarsesion
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Image = CType(resources.GetObject("Label2.Image"), System.Drawing.Image)
         Me.Label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label2.Location = New System.Drawing.Point(63, 276)
+        Me.Label2.Location = New System.Drawing.Point(145, 229)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(142, 29)
         Me.Label2.TabIndex = 5
@@ -105,29 +104,24 @@ Partial Class Form_iniciarsesion
         Me.btn_login_iniciar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btn_login_iniciar.Image = CType(resources.GetObject("btn_login_iniciar.Image"), System.Drawing.Image)
         Me.btn_login_iniciar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_login_iniciar.Location = New System.Drawing.Point(196, 490)
+        Me.btn_login_iniciar.Location = New System.Drawing.Point(212, 458)
         Me.btn_login_iniciar.Name = "btn_login_iniciar"
         Me.btn_login_iniciar.Size = New System.Drawing.Size(219, 67)
         Me.btn_login_iniciar.TabIndex = 6
         Me.btn_login_iniciar.Text = "Iniciar"
         Me.btn_login_iniciar.UseVisualStyleBackColor = False
         '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(677, 226)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(156, 24)
-        Me.ComboBox1.TabIndex = 7
-        '
         'btn_login_salir
         '
-        Me.btn_login_salir.Location = New System.Drawing.Point(516, 475)
+        Me.btn_login_salir.BackColor = System.Drawing.Color.Blue
+        Me.btn_login_salir.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_login_salir.ForeColor = System.Drawing.SystemColors.Control
+        Me.btn_login_salir.Location = New System.Drawing.Point(497, 458)
         Me.btn_login_salir.Name = "btn_login_salir"
-        Me.btn_login_salir.Size = New System.Drawing.Size(130, 48)
+        Me.btn_login_salir.Size = New System.Drawing.Size(195, 68)
         Me.btn_login_salir.TabIndex = 8
         Me.btn_login_salir.Text = "Salir"
-        Me.btn_login_salir.UseVisualStyleBackColor = True
+        Me.btn_login_salir.UseVisualStyleBackColor = False
         '
         'Form_iniciarsesion
         '
@@ -139,9 +133,8 @@ Partial Class Form_iniciarsesion
         Me.BackColor = System.Drawing.Color.White
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ClientSize = New System.Drawing.Size(1015, 831)
+        Me.ClientSize = New System.Drawing.Size(808, 580)
         Me.Controls.Add(Me.btn_login_salir)
-        Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.btn_login_iniciar)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -165,6 +158,5 @@ Partial Class Form_iniciarsesion
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents btn_login_iniciar As Button
-    Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents btn_login_salir As Button
 End Class

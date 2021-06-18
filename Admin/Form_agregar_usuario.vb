@@ -12,9 +12,15 @@ Public Class Form_agregar_usuario
             comandos.Parameters.AddWithValue("@nivel", txt_agregar_nivel.Text)
             comandos.ExecuteNonQuery()
             MsgBox("Datos registrados")
+            'Form_usuarios.actualizardatos()'
+
         Catch ex As Exception
             MsgBox("Intentelo de nuevo")
         End Try
+        txt_agregar_usuario.Text = ""
+        txt_agregar_contrasena.Clear()
+        txt_agregar_nivel.Clear()
+        Close()
 
     End Sub
 
@@ -26,9 +32,13 @@ Public Class Form_agregar_usuario
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
+
+
+
     End Sub
 
     Private Sub btn_agregar_volver_Click(sender As Object, e As EventArgs) Handles btn_agregar_volver.Click
-
+        Me.Hide()
+        Form_iniciarsesion.Show()
     End Sub
 End Class
