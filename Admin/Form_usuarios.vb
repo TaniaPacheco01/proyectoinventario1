@@ -44,7 +44,7 @@ Public Class Form_usuarios
     End Sub
 
     Private Sub btn_eliminar_usuarios_Click(sender As Object, e As EventArgs) Handles btn_eliminar_usuarios.Click
-
+        Form_eliminar_usuarios.Show()
     End Sub
 
 End Class

@@ -103,6 +103,12 @@
     <Compile Include="Admin\Form_usuarios.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Admin\Form_eliminar_usuarios.Designer.vb">
+      <DependentUpon>Form_eliminar_usuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Form_eliminar_usuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="login\Form_iniciarsesion.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +146,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Admin\Form_eliminar_usuarios.resx">
+      <DependentUpon>Form_eliminar_usuarios.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\Form_usuarios.resx">
       <DependentUpon>Form_usuarios.vb</DependentUpon>
     </EmbeddedResource>

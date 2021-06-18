@@ -27,3 +27,4 @@ C:\Users\tania\source\repos\proyectoinventario1\proyectoinventario1\obj\Debug\pr
 C:\Users\tania\source\repos\proyectoinventario1\proyectoinventario1\obj\Debug\proyectoinventario1.Form_productos.resources
 C:\Users\tania\source\repos\proyectoinventario1\proyectoinventario1\obj\Debug\proyectoinventario1.Form_agregar_usuario.resources
 C:\Users\tania\source\repos\proyectoinventario1\proyectoinventario1\obj\Debug\proyectoinventario1.Form_usuarios.resources
+C:\Users\tania\source\repos\proyectoinventario1\proyectoinventario1\obj\Debug\proyectoinventario1.Form_eliminar_usuarios.resources
