@@ -122,6 +122,7 @@
     <Compile Include="Admin\usuarios\Form_modificar_usuario.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="conexion.vb" />
     <Compile Include="Form_menu.Designer.vb">
       <DependentUpon>Form_menu.vb</DependentUpon>
     </Compile>

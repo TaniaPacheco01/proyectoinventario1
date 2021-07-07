@@ -1,18 +1,22 @@
-﻿Imports MySql.Data.MySqlClient
+﻿'Imports MySql.Data.MySqlClient
 
 Public Class Form_iniciarsesion
-    Dim conexion As New MySqlConnection
+    Dim conexion As New conexion
+    'Dim conexion As New MySqlConnection
     Dim adaptador As New MySqlDataAdapter
     Dim datos As DataSet
 
     Private Sub Form_iniciarsesion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Try
-            conexion.ConnectionString = "server=localhost;user=root;password=;database=inventario"
-            conexion.Open()
-            MsgBox("Conexion con BD establecida")
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
+        Dim dataset As DataSet
+        dataset = conexion.consultas("select * from inventario")
+
+        'Try
+        'conexion.ConnectionString = "server=localhost;user=root;password=;database=inventario"
+        'conexion.Open()
+        'MsgBox("Conexion con BD establecida")
+        'Catch ex As Exception
+        'MsgBox(ex.Message)
+        'End Try
 
 
     End Sub
