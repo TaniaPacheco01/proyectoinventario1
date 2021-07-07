@@ -41,6 +41,7 @@
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <RunCodeAnalysis>false</RunCodeAnalysis>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -97,16 +98,40 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin\Form_usuarios.Designer.vb">
-      <DependentUpon>Form_usuarios.vb</DependentUpon>
+    <Compile Include="Admin\productos_admin\Form_agregar_productos.Designer.vb">
+      <DependentUpon>Form_agregar_productos.vb</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Form_usuarios.vb">
+    <Compile Include="Admin\productos_admin\Form_agregar_productos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\Form_eliminar_usuarios.Designer.vb">
+    <Compile Include="Admin\usuarios\Form_usuarios.Designer.vb">
+      <DependentUpon>Form_usuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\usuarios\Form_usuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\usuarios\Form_eliminar_usuarios.Designer.vb">
       <DependentUpon>Form_eliminar_usuarios.vb</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Form_eliminar_usuarios.vb">
+    <Compile Include="Admin\usuarios\Form_eliminar_usuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\usuarios\Form_modificar_usuario.Designer.vb">
+      <DependentUpon>Form_modificar_usuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\usuarios\Form_modificar_usuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_menu.Designer.vb">
+      <DependentUpon>Form_menu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_menu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="programa\Form_productos.Designer.vb">
+      <DependentUpon>Form_productos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="programa\Form_productos.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="login\Form_iniciarsesion.vb">
@@ -116,16 +141,10 @@
       <DependentUpon>Form_iniciarsesion.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_productos.Designer.vb">
-      <DependentUpon>Form_productos.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form_productos.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\Form_agregar_usuario.Designer.vb">
+    <Compile Include="Admin\usuarios\Form_agregar_usuario.Designer.vb">
       <DependentUpon>Form_agregar_usuario.vb</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Form_agregar_usuario.vb">
+    <Compile Include="Admin\usuarios\Form_agregar_usuario.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -146,19 +165,28 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Admin\Form_eliminar_usuarios.resx">
+    <EmbeddedResource Include="Admin\productos_admin\Form_agregar_productos.resx">
+      <DependentUpon>Form_agregar_productos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\usuarios\Form_eliminar_usuarios.resx">
       <DependentUpon>Form_eliminar_usuarios.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin\Form_usuarios.resx">
+    <EmbeddedResource Include="Admin\usuarios\Form_usuarios.resx">
       <DependentUpon>Form_usuarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\usuarios\Form_modificar_usuario.resx">
+      <DependentUpon>Form_modificar_usuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_menu.resx">
+      <DependentUpon>Form_menu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="programa\Form_productos.resx">
+      <DependentUpon>Form_productos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login\Form_iniciarsesion.resx">
       <DependentUpon>Form_iniciarsesion.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_productos.resx">
-      <DependentUpon>Form_productos.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admin\Form_agregar_usuario.resx">
+    <EmbeddedResource Include="Admin\usuarios\Form_agregar_usuario.resx">
       <DependentUpon>Form_agregar_usuario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -193,5 +221,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

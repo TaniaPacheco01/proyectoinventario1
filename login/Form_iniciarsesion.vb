@@ -14,13 +14,15 @@ Public Class Form_iniciarsesion
             MsgBox(ex.Message)
         End Try
 
+
     End Sub
 
     Private Sub Button_login_iniciar_Click(sender As Object, e As EventArgs) Handles btn_login_iniciar.Click
+        'LOGIN
         Dim consulta As String
         Dim lista As Byte
-        If txt_usuario.Text <> "" And txt_contrasena.Text <> "" Then
-            consulta = "select * from usuarios where usuario='" & txt_usuario.Text & "' and contrasena='" & txt_contrasena.Text & "'"
+        If txt_usuario.Text <> "" And txt_contrasena.Text <> "" And cmb_nivel_login.Text <> "" Then
+            consulta = "select * from usuarios where usuario='" & txt_usuario.Text & "' and contrasena='" & txt_contrasena.Text & "' and nivel='" & cmb_nivel_login.Text & "' "
             adaptador = New MySqlDataAdapter(consulta, conexion)
             datos = New DataSet
             adaptador.Fill(datos, "usuarios")
@@ -29,13 +31,16 @@ Public Class Form_iniciarsesion
         If lista <> 0 Then
             MsgBox("Bienvenido")
 
-            Form_usuarios.Show()
+            Form_menu.Show()
+            Me.Hide()
         Else
             MsgBox("intentelo de nuevo")
+            Me.Refresh()
         End If
-        txt_usuario.Clear()
-        txt_contrasena.Clear()
-        Me.Hide()
+
+        If cmb_nivel_login.Text = "Administrador" Then
+            Form_productos.GroupBox_form_productos.Visible = True
+        End If
     End Sub
 
     Private Function comando() As MySqlCommand

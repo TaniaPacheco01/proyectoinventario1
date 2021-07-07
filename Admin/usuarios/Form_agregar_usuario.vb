@@ -9,7 +9,7 @@ Public Class Form_agregar_usuario
             comandos.Parameters.AddWithValue("@Idusuario", "")
             comandos.Parameters.AddWithValue("@usuario", txt_agregar_usuario.Text)
             comandos.Parameters.AddWithValue("@contrasena", txt_agregar_contrasena.Text)
-            comandos.Parameters.AddWithValue("@nivel", txt_agregar_nivel.Text)
+            comandos.Parameters.AddWithValue("@nivel", cmb_agregar_nivel.Text)
             comandos.ExecuteNonQuery()
             MsgBox("Datos registrados")
             'Form_usuarios.actualizardatos()'
@@ -17,9 +17,10 @@ Public Class Form_agregar_usuario
         Catch ex As Exception
             MsgBox("Intentelo de nuevo")
         End Try
-        txt_agregar_usuario.Text = ""
+        txt_agregar_usuario.Clear()
         txt_agregar_contrasena.Clear()
-        txt_agregar_nivel.Clear()
+
+
         Close()
 
     End Sub

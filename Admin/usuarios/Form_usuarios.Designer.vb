@@ -24,12 +24,15 @@ Partial Class Form_usuarios
     Private Sub InitializeComponent()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.txt_buscar_usuarios = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.btn_actualizar_usuarios = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btn_modificar_usuarios = New System.Windows.Forms.Button()
         Me.btn_agregar_ir_a_registro = New System.Windows.Forms.Button()
         Me.btn_eliminar_usuarios = New System.Windows.Forms.Button()
         Me.DataGridView1_usuarios = New System.Windows.Forms.DataGridView()
+        Me.btn_inicio_form_usuarios = New System.Windows.Forms.Button()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -48,25 +51,44 @@ Partial Class Form_usuarios
         '
         'SplitContainer1.Panel1
         '
+        Me.SplitContainer1.Panel1.Controls.Add(Me.btn_inicio_form_usuarios)
         Me.SplitContainer1.Panel1.Controls.Add(Me.GroupBox2)
         Me.SplitContainer1.Panel1.Controls.Add(Me.GroupBox1)
         '
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.DataGridView1_usuarios)
-        Me.SplitContainer1.Size = New System.Drawing.Size(1011, 531)
-        Me.SplitContainer1.SplitterDistance = 139
+        Me.SplitContainer1.Size = New System.Drawing.Size(1184, 494)
+        Me.SplitContainer1.SplitterDistance = 128
         Me.SplitContainer1.TabIndex = 0
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.txt_buscar_usuarios)
+        Me.GroupBox2.Controls.Add(Me.Label1)
         Me.GroupBox2.Controls.Add(Me.btn_actualizar_usuarios)
         Me.GroupBox2.Location = New System.Drawing.Point(26, 3)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(424, 119)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "GroupBox2"
+        '
+        'txt_buscar_usuarios
+        '
+        Me.txt_buscar_usuarios.Location = New System.Drawing.Point(80, 51)
+        Me.txt_buscar_usuarios.Name = "txt_buscar_usuarios"
+        Me.txt_buscar_usuarios.Size = New System.Drawing.Size(153, 22)
+        Me.txt_buscar_usuarios.TabIndex = 8
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.20895!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(6, 48)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(68, 24)
+        Me.Label1.TabIndex = 7
+        Me.Label1.Text = "Buscar"
         '
         'btn_actualizar_usuarios
         '
@@ -85,7 +107,7 @@ Partial Class Form_usuarios
         Me.GroupBox1.Controls.Add(Me.btn_modificar_usuarios)
         Me.GroupBox1.Controls.Add(Me.btn_agregar_ir_a_registro)
         Me.GroupBox1.Controls.Add(Me.btn_eliminar_usuarios)
-        Me.GroupBox1.Location = New System.Drawing.Point(482, 12)
+        Me.GroupBox1.Location = New System.Drawing.Point(479, 3)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(475, 110)
         Me.GroupBox1.TabIndex = 0
@@ -97,7 +119,7 @@ Partial Class Form_usuarios
         Me.btn_modificar_usuarios.BackColor = System.Drawing.Color.MediumBlue
         Me.btn_modificar_usuarios.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_modificar_usuarios.ForeColor = System.Drawing.SystemColors.Control
-        Me.btn_modificar_usuarios.Location = New System.Drawing.Point(49, 39)
+        Me.btn_modificar_usuarios.Location = New System.Drawing.Point(28, 39)
         Me.btn_modificar_usuarios.Name = "btn_modificar_usuarios"
         Me.btn_modificar_usuarios.Size = New System.Drawing.Size(130, 37)
         Me.btn_modificar_usuarios.TabIndex = 5
@@ -109,7 +131,7 @@ Partial Class Form_usuarios
         Me.btn_agregar_ir_a_registro.BackColor = System.Drawing.Color.LimeGreen
         Me.btn_agregar_ir_a_registro.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_agregar_ir_a_registro.ForeColor = System.Drawing.SystemColors.Control
-        Me.btn_agregar_ir_a_registro.Location = New System.Drawing.Point(198, 39)
+        Me.btn_agregar_ir_a_registro.Location = New System.Drawing.Point(185, 39)
         Me.btn_agregar_ir_a_registro.Name = "btn_agregar_ir_a_registro"
         Me.btn_agregar_ir_a_registro.Size = New System.Drawing.Size(133, 37)
         Me.btn_agregar_ir_a_registro.TabIndex = 4
@@ -136,15 +158,27 @@ Partial Class Form_usuarios
         Me.DataGridView1_usuarios.Name = "DataGridView1_usuarios"
         Me.DataGridView1_usuarios.RowHeadersWidth = 51
         Me.DataGridView1_usuarios.RowTemplate.Height = 24
-        Me.DataGridView1_usuarios.Size = New System.Drawing.Size(1011, 388)
+        Me.DataGridView1_usuarios.Size = New System.Drawing.Size(1184, 362)
         Me.DataGridView1_usuarios.TabIndex = 0
+        '
+        'btn_inicio_form_usuarios
+        '
+        Me.btn_inicio_form_usuarios.BackColor = System.Drawing.Color.Blue
+        Me.btn_inicio_form_usuarios.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.8209!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_inicio_form_usuarios.ForeColor = System.Drawing.SystemColors.Control
+        Me.btn_inicio_form_usuarios.Location = New System.Drawing.Point(1044, 43)
+        Me.btn_inicio_form_usuarios.Name = "btn_inicio_form_usuarios"
+        Me.btn_inicio_form_usuarios.Size = New System.Drawing.Size(105, 38)
+        Me.btn_inicio_form_usuarios.TabIndex = 2
+        Me.btn_inicio_form_usuarios.Text = "Inicio"
+        Me.btn_inicio_form_usuarios.UseVisualStyleBackColor = False
         '
         'Form_usuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.AppWorkspace
-        Me.ClientSize = New System.Drawing.Size(1011, 531)
+        Me.ClientSize = New System.Drawing.Size(1184, 494)
         Me.Controls.Add(Me.SplitContainer1)
         Me.Name = "Form_usuarios"
         Me.Text = "Usuarios"
@@ -153,6 +187,7 @@ Partial Class Form_usuarios
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         CType(Me.DataGridView1_usuarios, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -167,4 +202,7 @@ Partial Class Form_usuarios
     Friend WithEvents btn_agregar_ir_a_registro As Button
     Friend WithEvents btn_eliminar_usuarios As Button
     Friend WithEvents btn_actualizar_usuarios As Button
+    Friend WithEvents txt_buscar_usuarios As TextBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents btn_inicio_form_usuarios As Button
 End Class

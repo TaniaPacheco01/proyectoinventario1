@@ -1,4 +1,3 @@
-C:\Users\tania\source\repos\proyectoinventario1\proyectoinventario1\obj\Debug\proyectoinventario1.vbprojAssemblyReference.cache
 C:\Users\tania\source\repos\proyectoinventario1\proyectoinventario1\obj\Debug\proyectoinventario1.Form_iniciarsesion.resources
 C:\Users\tania\source\repos\proyectoinventario1\proyectoinventario1\obj\Debug\proyectoinventario1.Resources.resources
 C:\Users\tania\source\repos\proyectoinventario1\proyectoinventario1\obj\Debug\proyectoinventario1.vbproj.GenerateResource.cache
@@ -24,7 +23,11 @@ C:\Users\tania\source\repos\proyectoinventario1\proyectoinventario1\obj\Debug\pr
 C:\Users\tania\source\repos\proyectoinventario1\proyectoinventario1\obj\Debug\proyectoinventario1.exe
 C:\Users\tania\source\repos\proyectoinventario1\proyectoinventario1\obj\Debug\proyectoinventario1.xml
 C:\Users\tania\source\repos\proyectoinventario1\proyectoinventario1\obj\Debug\proyectoinventario1.pdb
-C:\Users\tania\source\repos\proyectoinventario1\proyectoinventario1\obj\Debug\proyectoinventario1.Form_productos.resources
 C:\Users\tania\source\repos\proyectoinventario1\proyectoinventario1\obj\Debug\proyectoinventario1.Form_agregar_usuario.resources
 C:\Users\tania\source\repos\proyectoinventario1\proyectoinventario1\obj\Debug\proyectoinventario1.Form_usuarios.resources
 C:\Users\tania\source\repos\proyectoinventario1\proyectoinventario1\obj\Debug\proyectoinventario1.Form_eliminar_usuarios.resources
+C:\Users\tania\source\repos\proyectoinventario1\proyectoinventario1\obj\Debug\proyectoinventario1.Form_modificar_usuario.resources
+C:\Users\tania\source\repos\proyectoinventario1\proyectoinventario1\obj\Debug\proyectoinventario1.Form_productos.resources
+C:\Users\tania\source\repos\proyectoinventario1\proyectoinventario1\obj\Debug\proyectoinventario1.Form_menu.resources
+C:\Users\tania\source\repos\proyectoinventario1\proyectoinventario1\obj\Debug\proyectoinventario1.Form_agregar_productos.resources
+C:\Users\tania\source\repos\proyectoinventario1\proyectoinventario1\obj\Debug\proyectoinventario1.vbproj.AssemblyReference.cache

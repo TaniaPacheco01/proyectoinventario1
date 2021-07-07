@@ -6,6 +6,7 @@ Public Class Form_eliminar_usuarios
     Dim datos As DataSet
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btn_eliminar_usuario.Click
+
         Dim eliminar As String
         Dim si As Byte
         si = MsgBox("¿Desea eliminar el registro?", vbYesNo, "Eliminar")
@@ -18,6 +19,8 @@ Public Class Form_eliminar_usuarios
             txt_idusuario.Clear()
             txt_nombre_usuario.Clear()
         End If
+        Me.Close()
+
     End Sub
 
     Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles txt_idusuario.TextChanged
