@@ -4,7 +4,12 @@
     End Sub
 
     Private Sub btn_menu_admin_Click(sender As Object, e As EventArgs) Handles btn_menu_admin.Click
-        Form_usuarios.Show()
+        Form_admin_opciones.Show()
     End Sub
 
+    Private Sub Form_menu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If Form_iniciarsesion.cmb_nivel_login.Text = "Administrador" Then
+            btn_menu_admin.Visible = True
+        End If
+    End Sub
 End Class

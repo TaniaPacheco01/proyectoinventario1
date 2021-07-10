@@ -110,12 +110,6 @@
     <Compile Include="Admin\usuarios\Form_usuarios.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\usuarios\Form_eliminar_usuarios.Designer.vb">
-      <DependentUpon>Form_eliminar_usuarios.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\usuarios\Form_eliminar_usuarios.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Admin\usuarios\Form_modificar_usuario.Designer.vb">
       <DependentUpon>Form_modificar_usuario.vb</DependentUpon>
     </Compile>
@@ -123,10 +117,22 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="conexion.vb" />
-    <Compile Include="Form_menu.Designer.vb">
+    <Compile Include="Admin\Form_admin_opciones.Designer.vb">
+      <DependentUpon>Form_admin_opciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Form_admin_opciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\productos_admin\Form_modificar_productos.Designer.vb">
+      <DependentUpon>Form_modificar_productos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\productos_admin\Form_modificar_productos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="programa\Form_menu.Designer.vb">
       <DependentUpon>Form_menu.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form_menu.vb">
+    <Compile Include="programa\Form_menu.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="programa\Form_productos.Designer.vb">
@@ -169,16 +175,19 @@
     <EmbeddedResource Include="Admin\productos_admin\Form_agregar_productos.resx">
       <DependentUpon>Form_agregar_productos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin\usuarios\Form_eliminar_usuarios.resx">
-      <DependentUpon>Form_eliminar_usuarios.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Admin\usuarios\Form_usuarios.resx">
       <DependentUpon>Form_usuarios.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\usuarios\Form_modificar_usuario.resx">
       <DependentUpon>Form_modificar_usuario.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_menu.resx">
+    <EmbeddedResource Include="Admin\Form_admin_opciones.resx">
+      <DependentUpon>Form_admin_opciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\productos_admin\Form_modificar_productos.resx">
+      <DependentUpon>Form_modificar_productos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="programa\Form_menu.resx">
       <DependentUpon>Form_menu.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="programa\Form_productos.resx">

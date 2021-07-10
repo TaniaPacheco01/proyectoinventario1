@@ -1,26 +1,16 @@
-﻿Imports MySql.Data.MySqlClient
+﻿
 Public Class Form_productos
-    Dim conexion As New MySqlConnection
+    Dim conexion As New conexion
     Dim datos As DataSet
-    Dim adaptador As New MySqlDataAdapter
     Dim fila As Integer
     Private Sub Form_productos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         actualizardatosproductos()
     End Sub
     Public Function actualizardatosproductos() As String
-        Try
-            conexion.ConnectionString = "server=localhost;user=root;password=;database=inventario"
-            conexion.Open()
-            Dim consulta As String
-            consulta = "select * from productos"
-            adaptador = New MySqlDataAdapter(consulta, conexion)
-            datos = New DataSet
-            adaptador.Fill(datos, "productos")
-            DataGridView2_productos.DataSource = datos
-            DataGridView2_productos.DataMember = "productos"
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
+        Dim datos As New DataSet
+        datos = conexion.consultas("select * from productos")
+        DataGridView2_productos.DataSource = datos.Tables(0)
+        DataGridView2_productos.Refresh()
         Return Nothing
     End Function
 
@@ -29,53 +19,40 @@ Public Class Form_productos
         Form_agregar_productos.Show()
     End Sub
 
-    Private Sub btn_actualizar_productos_Click(sender As Object, e As EventArgs) Handles btn_actualizar_productos.Click
-        Dim consulta As String
-        consulta = "select * from productos"
-        adaptador = New MySqlDataAdapter(consulta, conexion)
-        datos = New DataSet
-        adaptador.Fill(datos, "productos")
-        DataGridView2_productos.DataSource = datos
-        DataGridView2_productos.DataMember = "productos"
-    End Sub
-
     Private Sub DataGridView2_productos_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView2_productos.CellClick
         fila = e.RowIndex
     End Sub
 
     Private Sub btn_eliminar_productos_Click(sender As Object, e As EventArgs) Handles btn_eliminar_productos.Click
-        'Try
-        Dim eliminar As String
-        'conexion.ConnectionString = "server=localhost;user=root;password=;database=inventario"
-        'conexion.Open()
-        eliminar = "delete from productos where Idproductos=" & DataGridView2_productos.Rows(fila).Cells(0).Value
-        MsgBox(eliminar)
-        Dim comando = New MySqlCommand(eliminar, conexion)
-        Dim adaptador = MySqlDataAdapter(comando)  'crear clase de conexion
-        MsgBox("Producto eliminado")
-        ' actualizardatosproductos()
-        'Catch ex As Exception
-        'MsgBox("A ocurrido un error" + ex.Message)
-
-        'End Try
-
-
-
-
-
-        'conexion.ConnectionString("delete from productos where Idproductos=" & DataGridView2_productos.Rows(fila).Cells(0).Value(0) & "")
-        'MsgBox("Usuario eliminado")
+        conexion.consultas("delete from productos where Idproductos=" & DataGridView2_productos.Rows(fila).Cells(0).Value & "")
+        MsgBox("El producto ha sido eliminado")
+        actualizardatosproductos()
     End Sub
 
     Private Sub txt_buscar_productos_TextChanged(sender As Object, e As EventArgs) Handles txt_buscar_productos.TextChanged
-        Dim adaptador As New MySqlDataAdapter("Select * from productos where descripcion like '" + txt_buscar_productos.Text + "%'", conexion)
-        Dim tabladedatos = New DataTable
-        adaptador.Fill(tabladedatos)
-        Me.DataGridView2_productos.DataSource = tabladedatos
-        Refresh()
+        Dim datosbuscar As New DataSet
+        datosbuscar = conexion.consultas("select * from productos where descripcion like '%" & txt_buscar_productos.Text & "%'")
+        DataGridView2_productos.DataSource = datosbuscar.Tables(0)
+        DataGridView2_productos.Refresh()
     End Sub
 
-    Private Sub btn_inicio_form_productos_Click(sender As Object, e As EventArgs) Handles btn_inicio_form_productos.Click
+    Private Sub btn_inicio_form_productos_Click(sender As Object, e As EventArgs)
         Form_menu.Show()
+    End Sub
+
+    Private Sub btn_modificar_productos_Click(sender As Object, e As EventArgs) Handles btn_modificar_productos.Click
+        Form_modificar_productos.Show()
+        Form_modificar_productos.txt_modificar_productos_id.Text = DataGridView2_productos.Rows(fila).Cells(0).Value
+        Form_modificar_productos.txt_productos_modificar_codigo.Text = DataGridView2_productos.Rows(fila).Cells(1).Value
+        Form_modificar_productos.txt_productos_modificar_descripcion.Text = DataGridView2_productos.Rows(fila).Cells(2).Value
+        Form_modificar_productos.txt_productos_modificar_unidad.Text = DataGridView2_productos.Rows(fila).Cells(3).Value
+        Form_modificar_productos.txt_productos_modificar_precio.Text = DataGridView2_productos.Rows(fila).Cells(4).Value
+        Form_modificar_productos.txt_productos_modificar_existencia.Text = DataGridView2_productos.Rows(fila).Cells(5).Value
+
+    End Sub
+
+    Private Sub btn_inicio_form_usuarios_Click(sender As Object, e As EventArgs) Handles btn_inicio_form_usuarios.Click
+        Form_menu.Show()
+        Me.Close()
     End Sub
 End Class

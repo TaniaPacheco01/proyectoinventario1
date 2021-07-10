@@ -4,7 +4,7 @@ Public Class conexion
     Const password As String = ""
     Const servidor As String = "localhost"
     Const base_datos As String = "inventario"
-    Dim datos_servidor = "server=" & servidor & ";user id=" & usuario & ";password=" & password & ";database" & base_datos & ";"
+    Dim datos_servidor = "server=" & servidor & ";user id=" & usuario & ";password=" & password & ";database=" & base_datos & ";"
     Dim conexion As New MySqlConnection(datos_servidor)
 
     Public Function consultas(ByVal query) As DataSet
@@ -12,7 +12,6 @@ Public Class conexion
         Try
             If Not conexion.State = ConnectionState.Open Then
                 conexion.ConnectionString = datos_servidor
-                '"server=localhost;usaer=root;password=;database=inventario"
                 conexion.Open()
             End If
             Dim comando As New MySqlCommand(query, conexion)
