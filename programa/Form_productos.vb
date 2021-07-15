@@ -24,8 +24,12 @@ Public Class Form_productos
     End Sub
 
     Private Sub btn_eliminar_productos_Click(sender As Object, e As EventArgs) Handles btn_eliminar_productos.Click
-        conexion.consultas("delete from productos where Idproductos=" & DataGridView2_productos.Rows(fila).Cells(0).Value & "")
-        MsgBox("El producto ha sido eliminado")
+        Dim confirmar As MsgBoxResult
+        confirmar = MsgBox("Esta a punto de eliminar un producto, ¿desea continuar?", MsgBoxStyle.YesNo, "Eliminar Producto")
+        If confirmar = MsgBoxResult.Yes Then
+            conexion.consultas("delete from productos where Idproductos=" & DataGridView2_productos.Rows(fila).Cells(0).Value & "")
+            MsgBox("Producto eliminado")
+        End If
         actualizardatosproductos()
     End Sub
 
@@ -54,5 +58,11 @@ Public Class Form_productos
     Private Sub btn_inicio_form_usuarios_Click(sender As Object, e As EventArgs) Handles btn_inicio_form_usuarios.Click
         Form_menu.Show()
         Me.Close()
+    End Sub
+
+    Private Sub GroupBox_form_productos_Enter(sender As Object, e As EventArgs) Handles GroupBox_form_productos.Enter
+        If Form_iniciarsesion.nivelUsuario = "Administrador" Then
+            GroupBox_form_productos.Visible = True
+        End If
     End Sub
 End Class

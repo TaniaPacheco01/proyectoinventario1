@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form_iniciarsesion
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Form_iniciarsesion
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form_iniciarsesion))
         Me.Label_login_bienvenido = New System.Windows.Forms.Label()
@@ -31,8 +31,6 @@ Partial Class Form_iniciarsesion
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btn_login_iniciar = New System.Windows.Forms.Button()
         Me.btn_login_salir = New System.Windows.Forms.Button()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.cmb_nivel_login = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'Label_login_bienvenido
@@ -125,28 +123,6 @@ Partial Class Form_iniciarsesion
         Me.btn_login_salir.Text = "Salir"
         Me.btn_login_salir.UseVisualStyleBackColor = False
         '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.FromArgb(CType(CType(178, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(187, Byte), Integer))
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label3.Location = New System.Drawing.Point(169, 358)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(121, 32)
-        Me.Label3.TabIndex = 10
-        Me.Label3.Text = "      Nivel"
-        '
-        'cmb_nivel_login
-        '
-        Me.cmb_nivel_login.FormattingEnabled = True
-        Me.cmb_nivel_login.Items.AddRange(New Object() {"Usuario", "Administrador"})
-        Me.cmb_nivel_login.Location = New System.Drawing.Point(340, 366)
-        Me.cmb_nivel_login.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.cmb_nivel_login.Name = "cmb_nivel_login"
-        Me.cmb_nivel_login.Size = New System.Drawing.Size(255, 24)
-        Me.cmb_nivel_login.TabIndex = 11
-        '
         'Form_iniciarsesion
         '
         Me.AcceptButton = Me.btn_login_iniciar
@@ -157,8 +133,6 @@ Partial Class Form_iniciarsesion
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(178, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(187, Byte), Integer))
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ClientSize = New System.Drawing.Size(780, 580)
-        Me.Controls.Add(Me.cmb_nivel_login)
-        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.btn_login_salir)
         Me.Controls.Add(Me.btn_login_iniciar)
         Me.Controls.Add(Me.Label2)
@@ -184,6 +158,4 @@ Partial Class Form_iniciarsesion
     Friend WithEvents Label2 As Label
     Friend WithEvents btn_login_iniciar As Button
     Friend WithEvents btn_login_salir As Button
-    Friend WithEvents Label3 As Label
-    Friend WithEvents cmb_nivel_login As ComboBox
 End Class

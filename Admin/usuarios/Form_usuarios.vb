@@ -24,8 +24,12 @@ Public Class Form_usuarios
     End Sub
 
     Private Sub btn_eliminar_usuarios_Click(sender As Object, e As EventArgs) Handles btn_eliminar_usuarios.Click
-        conexion.consultas("delete from usuarios where Idusuario=" & DataGridView1_usuarios.Rows(fila).Cells(0).Value & "")
-        MsgBox("El usuario ha sido eliminado")
+        Dim confirmar As MsgBoxResult
+        confirmar = MsgBox("Esta a punto de eliminar un usuario, ¿desea continuar?", MsgBoxStyle.YesNo, "Elimianr Usuario")
+        If confirmar = MsgBoxResult.Yes Then
+            conexion.consultas("delete from usuarios where Idusuario=" & DataGridView1_usuarios.Rows(fila).Cells(0).Value & "")
+            MsgBox("Usuario eliminado")
+        End If
         actualizardatosdgusuarios()
     End Sub
 
@@ -53,5 +57,9 @@ Public Class Form_usuarios
     Private Sub btn_inicio_form_usuarios_Click(sender As Object, e As EventArgs) Handles btn_inicio_form_usuarios.Click
         Form_menu.Show()
         Me.Close()
+    End Sub
+
+    Private Sub DataGridView1_usuarios_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1_usuarios.CellContentClick
+
     End Sub
 End Class

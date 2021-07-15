@@ -27,6 +27,7 @@ Partial Class Form_menu
         Me.btn_menu_admin = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btn_cerrar_sesion = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -61,6 +62,7 @@ Partial Class Form_menu
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(65, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.btn_cerrar_sesion)
         Me.Panel1.Controls.Add(Me.btn_menu_admin)
         Me.Panel1.Controls.Add(Me.btn_menu_productos)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
@@ -78,6 +80,19 @@ Partial Class Form_menu
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 3
         Me.PictureBox1.TabStop = False
+        '
+        'btn_cerrar_sesion
+        '
+        Me.btn_cerrar_sesion.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btn_cerrar_sesion.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.74627!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_cerrar_sesion.ForeColor = System.Drawing.SystemColors.Control
+        Me.btn_cerrar_sesion.Location = New System.Drawing.Point(0, 295)
+        Me.btn_cerrar_sesion.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btn_cerrar_sesion.Name = "btn_cerrar_sesion"
+        Me.btn_cerrar_sesion.Size = New System.Drawing.Size(162, 65)
+        Me.btn_cerrar_sesion.TabIndex = 2
+        Me.btn_cerrar_sesion.Text = "Cerrar sesion"
+        Me.btn_cerrar_sesion.UseVisualStyleBackColor = False
         '
         'Form_menu
         '
@@ -101,4 +116,5 @@ Partial Class Form_menu
     Friend WithEvents btn_menu_admin As Button
     Friend WithEvents Panel1 As Panel
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents btn_cerrar_sesion As Button
 End Class

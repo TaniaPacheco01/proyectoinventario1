@@ -3,7 +3,9 @@ Public Class Form_iniciarsesion
     Dim conexion As New conexion
     Dim datos As DataSet
 
+    Public nivelUsuario As String
     Private Sub Form_iniciarsesion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         datos = conexion.consultas("select * from usuarios")
 
     End Sub
@@ -12,10 +14,13 @@ Public Class Form_iniciarsesion
         'LOGIN
         Dim datos As New DataSet
         Dim lista As Byte
-        If txt_usuario.Text <> "" And txt_contrasena.Text <> "" And cmb_nivel_login.Text <> "" Then
+        If txt_usuario.Text <> "" And txt_contrasena.Text <> "" Then
 
-            datos = conexion.consultas("select * from usuarios where usuario='" & txt_usuario.Text & "' and contrasena='" & txt_contrasena.Text & "' and nivel='" & cmb_nivel_login.Text & "' ")
+            datos = conexion.consultas("select * from usuarios where usuario='" & txt_usuario.Text & "' and contrasena='" & txt_contrasena.Text & "' ")
             lista = datos.Tables(0).Rows.Count
+
+            nivelUsuario = datos.Tables(0).Rows(0).Item(3).ToString
+
         End If
         If lista <> 0 Then
             MsgBox("Bienvenido")
@@ -26,9 +31,11 @@ Public Class Form_iniciarsesion
             MsgBox("intentelo de nuevo")
             Me.Refresh()
         End If
+        txt_contrasena.Clear()
+        txt_usuario.Clear()
 
         'PRIVILEGIO DE USUARIO
-        If cmb_nivel_login.Text = "Administrador" Then
+        If nivelUsuario = "Administrador" Then
             Form_productos.GroupBox_form_productos.Visible = True
         End If
     End Sub

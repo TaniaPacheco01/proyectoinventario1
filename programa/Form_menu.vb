@@ -8,8 +8,17 @@
     End Sub
 
     Private Sub Form_menu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If Form_iniciarsesion.cmb_nivel_login.Text = "Administrador" Then
+        If Form_iniciarsesion.nivelUsuario = "Administrador" Then
             btn_menu_admin.Visible = True
+        End If
+    End Sub
+
+    Private Sub btn_cerrar_sesion_Click(sender As Object, e As EventArgs) Handles btn_cerrar_sesion.Click
+        Dim salir As MsgBoxResult
+        salir = MsgBox("¿Desea cerrar sesion?", MsgBoxStyle.YesNo, "Cerrar sesion")
+        If salir = MsgBoxResult.Yes Then
+            Me.Close()
+            Form_iniciarsesion.Show()
         End If
     End Sub
 End Class
